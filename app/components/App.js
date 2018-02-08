@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
-import Listing from './listing/listing';
+import PollListing from './polllisting/polllisting';
+import PollDetail from './polldetail/polldetail';
 import './style.scss';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.prepareData = this.prepareData.bind(this);
+    this.handleClickDetail = this.handleClickDetail.bind(this);
     this.state = {
-      data: this.prepareData()
+      data: this.prepareData(),
+      showPollListing: true,
+      showPollDetail: true
     }
   }
 
@@ -18,6 +22,15 @@ class App extends Component {
   }
 
   componentWillUnmount() {
+  }
+
+  handleClickDetail (event) {
+    this.setState({
+      showPollListing: false,
+      showPollDetail: true
+    })
+
+    console.log()
   }
 
   prepareData() {
@@ -130,11 +143,16 @@ class App extends Component {
   }
 
   render() {
-    const { data } = this.state;
+    const { data, showPollListing, showPollDetail } = this.state;
 
     return (
       <div className="landing">
-        <Listing pollsData={data} />
+        { showPollListing && 
+          <PollListing pollsData={data} onClickDetail={this.handleClickDetail} />
+        }
+        { showPollDetail && 
+          <PollDetail pollsData={data} />
+        }
       </div>
     );
   }

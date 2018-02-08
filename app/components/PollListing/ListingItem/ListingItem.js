@@ -11,10 +11,10 @@ class ListingItem extends Component {
     const itemDataDetail = itemData.polls;
     const listItems = itemDataDetail.map((number, index) =>
       <li key={index}>
-        <div class="itemHolder">
+        <div className="itemHolder">
           <a href="javascript:;">
-            <div class="thumbnail">Static Image</div>
-            <div class="description">
+            <div className="thumbnail">Static Image</div>
+            <div className="description">
               <p>{ number.publishedDate }</p>
                 { number.title }
             </div>

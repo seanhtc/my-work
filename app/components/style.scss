@@ -12,3 +12,15 @@ a {
 	color: #333;
 	text-decoration: none;
 }
+
+.clearfix {
+	&::after,
+	&::before {
+	    display: table;
+	    content: "";
+	}
+
+	&::after {
+	    clear: both;
+	}
+}

@@ -1,0 +1,44 @@
+.cover {
+	padding: 25px 10px;
+	background-color: #dbdbdb;
+
+	&::after,
+	&::before {
+	    display: table;
+	    content: "";
+	}
+
+	&::after {
+	    clear: both;
+	}
+
+	article {
+		width: 100%;
+		margin: 0 auto;
+		display: inline-block;
+		padding-bottom: 20px;
+		border-bottom: dashed 1px #333;
+
+		.leftColumn {
+			float: left;
+			width: 60%;
+
+			h1 {
+				margin-top: 0;
+			}
+		}
+
+		.rightColumn {
+			float: right;
+			width: 40%;
+		}
+
+		.totalNumber {
+			padding-top: 20px;	
+    		p {
+    			display: inline-block;
+				margin: 0 auto;
+    		}
+		}
+	}
+}

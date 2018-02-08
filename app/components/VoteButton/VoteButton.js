@@ -6,6 +6,7 @@ const VoteButton = (props) => {
     <button 
       type="button" 
       className={ props.type === '1' ? "styleYes" : "styleNo" }
+      onClick={props.onClickButton}
     >
       {props.label}
     </button>
@@ -14,7 +15,8 @@ const VoteButton = (props) => {
 
 VoteButton.PropTypes = {
     label: PropTypes.string,
-    type: PropTypes.string
+    type: PropTypes.string,
+    onClickButton: PropTypes.func
 };
 
 export default VoteButton;
