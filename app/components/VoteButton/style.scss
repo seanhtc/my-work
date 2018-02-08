@@ -1,0 +1,23 @@
+$possitiveColor: #e46c2c;
+$negativeColor: #103c6b;
+
+// button deafult style
+button {
+	display: block;
+	padding: 5px 10px;
+	font-weight: bold;
+	font-size: 1.15rem;
+	text-transform: uppercase;
+	color: white;
+	min-width: 85px;
+}
+
+// case button value is 1 style
+.styleYes {
+	background-color: $possitiveColor;
+}
+
+// case button value is 0 style
+.styleNo {
+	background-color: $negativeColor;
+}

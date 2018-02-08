@@ -1,0 +1,29 @@
+.cover {
+	padding: 5px;
+	background-color: #dbdbdb;
+
+	&::after,
+	&::before {
+	    display: table;
+	    content: "";
+	}
+
+	&::after {
+	    clear: both;
+	}
+
+	article {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.leftColumn {
+		float: left;
+		width: 60%;
+	}
+
+	.rightColumn {
+		float: right;
+		width: 40%;
+	}
+}
