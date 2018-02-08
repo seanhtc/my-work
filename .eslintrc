@@ -1,5 +1,16 @@
 {
-  "extends": "airbnb",
+  "extends": [
+    "standard",
+    "standard-react",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "plugins": [
+    "babel",
+    "react",
+    "import",
+    "import-order"
+  ],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 6,
@@ -20,6 +31,38 @@
     "linebreak-style": "off",
     "global-require": "off",
     "semi": "warn",
-    "arrow-body-style": "off"
+    "arrow-body-style": "off",
+    "arrow-parens"                  : 2,
+    "dot-notation"                  : 2,
+    "id-length"                     : [ 0, { "exceptions": ["i", "j", "$", "_"] }],
+    "import/first"                  : 2,
+    "import/no-mutable-exports"     : 2,
+    "import/no-unresolved"          : 0,
+    "import-order/import-order"     : 2,
+    "import/prefer-default-export"  : 2,
+    "indent"                        : [2, 4, { "SwitchCase": 1 }],
+    "jsx-quotes"                    : [2, "prefer-double"],
+    "key-spacing"                   : 0,        
+    "max-len"                       : [2, 180],
+    "no-case-declarations"          : 2,
+    "no-constant-condition"         : 0,
+    "no-duplicate-imports"          : 2,
+    "no-iterator"                   : 2,
+    "no-nested-ternary"             : 2,
+    "no-param-reassign"             : 2,
+    "no-underscore-dangle"          : 2,
+    "no-unneeded-ternary"           : 2,
+    "no-var"                        : 2,
+    "no-template-curly-in-string"   : 0,
+    "object-curly-spacing"          : [2, "always"],
+    "object-shorthand"              : 2,
+    "prefer-arrow-callback"         : 2,
+    "prefer-const"                  : 2,
+    "prefer-rest-params"            : 2,
+    "prefer-spread"                 : 2,
+    "prefer-template"               : 2,
+    "radix"                         : 2,
+    "react/jsx-closing-bracket-location": 2,
+    "react/jsx-indent"              : [2, 4]
   }
 }
