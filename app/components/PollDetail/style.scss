@@ -1,0 +1,19 @@
+.detail {
+	padding: 10px;
+	background-color: #b2d0e4;
+
+	.leftColumn {
+		float: left;
+	}
+
+	.rightColumn {
+		float: right;
+	}
+	
+	@media only screen and (max-width: 768px) {
+		.leftColumn,
+		.rightColumn {
+			float: none;
+		}
+	}
+}
